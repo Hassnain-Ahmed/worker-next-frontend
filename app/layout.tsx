@@ -46,6 +46,7 @@ import Navigation from "@/components/layout/navigation"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import type React from "react"
+import Layout from "./admin"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -61,19 +62,22 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-          crossOrigin=""
-        />
-      </head>
-      <body className={inter.className}>
-        <Navigation />
-        <main className="min-h-screen bg-gray-50">{children}</main>
-      </body>
-    </html>
+    <Layout>
+      <html lang="en">
+        <head>
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossOrigin=""
+          />
+        </head>
+        <body className={inter.className}>
+          <Navigation />
+          <main className="min-h-screen bg-gray-50">{children}</main>
+        </body>
+      </html>
+    </Layout>
+
   )
 }
