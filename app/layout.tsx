@@ -62,22 +62,22 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <Layout>
-      <html lang="en">
-        <head>
-          <link
-            rel="stylesheet"
-            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-            crossOrigin=""
-          />
-        </head>
+    <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossOrigin=""
+        />
+      </head>
+      <Layout>
         <body className={inter.className}>
           <Navigation />
           <main className="min-h-screen bg-gray-50">{children}</main>
         </body>
-      </html>
-    </Layout>
+      </Layout>
+    </html>
 
   )
 }
