@@ -71,12 +71,12 @@ export default function RootLayout({
           crossOrigin=""
         />
       </head>
-      <Layout>
-        <body className={inter.className}>
+      <body className={inter.className}>
+        <Layout>
           <Navigation />
           <main className="min-h-screen bg-gray-50">{children}</main>
-        </body>
-      </Layout>
+        </Layout>
+      </body>
     </html>
 
   )
